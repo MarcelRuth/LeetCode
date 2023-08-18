@@ -11,11 +11,10 @@ class Solution:
 
         for edge in roads:
             # first count the edges of each node
-
             counter[edge[0]] += 1
             counter[edge[1]] += 1
 
-        counter = {key: value for key, value in sorted(counter.items(), key=lambda item: item[1], reverse=True)}
+        # check all combinations
         for key in counter:
             for key2 in counter:
                 if key != key2:
