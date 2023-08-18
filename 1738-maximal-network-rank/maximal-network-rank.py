@@ -22,7 +22,6 @@ class Solution:
                         pot_max_rank = counter[key] + counter[key2] - 1
                     else:
                         pot_max_rank = counter[key] + counter[key2]
-                    if pot_max_rank > max_rank:
-                        max_rank = pot_max_rank
+                    max_rank = max(max_rank, pot_max_rank)
 
         return max_rank
