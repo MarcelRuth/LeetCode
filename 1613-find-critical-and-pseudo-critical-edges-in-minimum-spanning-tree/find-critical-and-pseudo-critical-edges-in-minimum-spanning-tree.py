@@ -1,5 +1,3 @@
-# plss Upvote For Me :(
-
 # Creating Class For MST Algorithm
 class UnionFind:
     def __init__ (self, n):
