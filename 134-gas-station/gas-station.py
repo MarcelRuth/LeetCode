@@ -1,9 +1,5 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-        # If total gas is less than total cost
-        if sum(gas) < sum(cost):
-            return -1
-        
         n = len(gas)
         gasTank, totalGas, start = 0, 0, 0
         
