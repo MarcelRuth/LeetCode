@@ -9,6 +9,7 @@ class Solution:
         if not root:
             return true
         return self.check_tree(root.left, root.right)
+        
     def check_tree(self, left_root, right_root):
 
         # treat it like checking for if equal but invert left and right
