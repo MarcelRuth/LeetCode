@@ -9,6 +9,8 @@ class Solution:
         current_line = ''
 
         for w in words:
+            
+            # only if not word is in line already
             if len(w) == maxWidth and current_wordcount == 0:
                 line_list.append(w)
                 words_in_line.append(1)
