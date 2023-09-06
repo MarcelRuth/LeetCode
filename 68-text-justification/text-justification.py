@@ -9,7 +9,7 @@ class Solution:
         current_line = ''
 
         for w in words:
-            
+
             # only if not word is in line already
             if len(w) == maxWidth and current_wordcount == 0:
                 line_list.append(w)
@@ -39,8 +39,6 @@ class Solution:
         if current_line:
             line_list.append(current_line)
             words_in_line.append(current_wordcount)
-
-        print(line_list)
 
         justified_list = []
         for i, (l, wc) in enumerate(zip(line_list, words_in_line)):
