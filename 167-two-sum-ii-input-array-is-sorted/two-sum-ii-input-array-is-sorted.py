@@ -6,7 +6,8 @@ class Solution:
 
         while small != large:
             if numbers[small] + numbers[large] == target:
-                return [small + 1, large + 1] # one indexed
+                 # one indexed => + 1
+                return [small + 1, large + 1]
             elif numbers[small] + numbers[large] > target:
                 large -= 1
             else:
