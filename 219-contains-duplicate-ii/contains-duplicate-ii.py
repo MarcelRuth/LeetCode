@@ -1,7 +1,7 @@
 from collections import deque
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        
+        # deque approach
         q = deque([], k)
         for n in nums:
             if n in q:
