@@ -15,6 +15,7 @@ class Solution:
         #return True
 
     # "hare and tortoise" algorithm
+    
         fast_pointer = head
         slow_pointer = head
 
