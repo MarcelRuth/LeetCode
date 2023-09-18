@@ -6,11 +6,11 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        mapping = {}
+        mapping = set()
         while head not in mapping:
             if head == None:
                 return False
-            mapping[head] = head.val
+            mapping.add(head)
             head = head.next
         return True
 
