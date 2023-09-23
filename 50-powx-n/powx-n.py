@@ -8,6 +8,7 @@ class Solution:
             x = 1 / x
 
         res = 1
+        
         while n != 0:
             if (n % 2) != 0:
                 res *= x
