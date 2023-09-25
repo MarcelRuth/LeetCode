@@ -1,35 +1,22 @@
-from typing import List
-
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+        graph = defaultdict(list)
         
-        # Create adjacency list representation of the graph
-        graph = {i: [] for i in range(n)}
-        for edge in edges:
-            graph[edge[0]].append(edge[1])
-            graph[edge[1]].append(edge[0])
+        for u, v in edges:
+            graph[u].append(v)
+            graph[v].append(u)
 
-        already_visited = set()
+        visited = set()
+        queue = deque([source])
 
-        # Edge cases
-        if source == destination:
-            return True
-
-        if destination >= n or source >= n:
-            return False
-
-        # Recursive DFS function
-        def explore(current_node, destination):
-            if current_node == destination:
+        while queue:
+            node = queue.popleft()
+            if node == destination:
                 return True
-
-            already_visited.add(current_node)
-
-            for neighbor in graph[current_node]:
-                if neighbor not in already_visited:
-                    if explore(neighbor, destination):
-                        return True
-
-            return False
-
-        return explore(source, destination)
+            
+            for neighbor in graph[node]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append(neighbor)
+        
+        return False
