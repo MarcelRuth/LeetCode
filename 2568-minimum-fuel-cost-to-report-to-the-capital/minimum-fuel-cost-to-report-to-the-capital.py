@@ -23,7 +23,7 @@ class Solution:
 
             # if we are not at the captial
             if node != 0:
-                ans[0] += ceil(people/seats)
+                ans[0] += math.ceil(people/seats)
             
             return people
 
